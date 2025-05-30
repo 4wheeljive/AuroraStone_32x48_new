@@ -27,7 +27,7 @@ using namespace fl;
 //bleControl variables ************************************************************************
 //elements that must be set before #include "bleControl.h" 
 
-uint8_t program = 2;
+uint8_t program = 1;
 uint8_t pattern;
 bool displayOn = true;
 bool runPride = true;
@@ -62,7 +62,7 @@ uint8_t savedBrightness;
 
 #define SERPENTINE true 
 
-bool screenTest = true;
+bool screenTest = false;
 
 //*******************************************************************************************
 
@@ -99,12 +99,13 @@ void setup() {
  FastLED.clear();
  FastLED.show();
 
- Serial.begin(115200);
+/* Serial.begin(115200);
  delay(500);
  Serial.print("Initial brightness: ");
  Serial.println(BRIGHTNESS);
  Serial.print("Initial speed: ");
  Serial.println(SPEED);
+*/
 
  bleSetup();
 
