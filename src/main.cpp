@@ -204,7 +204,7 @@ void prideWaves(uint8_t pattern) {
       ledNum = loc2indSerp[i];;
     }
 
-    nblend( leds[ledNum], newcolor, 64);
+    nblend( leds[ledNum], newcolor, blendFract);
 
   }
 
